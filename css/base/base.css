@@ -2,5 +2,96 @@
 /* @import '../components/; */
 
 body{
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(212, 230, 254);
+    font-family: Arial, sans-serif;
+    color: rgb(6, 15, 146);
+    margin: auto;
 }
+.form{
+    background-color: rgb(253, 254, 255);
+    border-radius: 4px;
+    margin: 50px;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+
+
+}
+.title{
+    grid-area: title;
+    text-transform:capitalize;
+    font-weight:normal;
+}
+
+::placeholder {
+    text-transform:capitalize;
+    font-family: Arial, sans-serif;
+    color: rgb(6, 15, 146);
+    opacity: 1; /* Firefox */
+  }
+
+  #message {
+    display: inline-block; /* Thanks to Fanky (https://stackoverflow.com/users/2095642/fanky) */
+    text-transform: lowercase;
+  }
+  
+  #message:first-letter {
+    text-transform: uppercase;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    text-transform:capitalize;
+    font-family: Arial, sans-serif;
+    color: rgb(6, 15, 146);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    text-transform:capitalize;
+    font-family: Arial, sans-serif;
+    color: rgb(6, 15, 146);
+  }
+  .thxMsg{
+    font-family: Arial, sans-serif;
+    color: rgb(132, 204, 182);
+  }
+
+  .container {
+    /* align-self: center; */
+    padding: 50px;
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "title title"        
+        "first-name last-name"
+        "email phone"
+        "address address"
+        "message message"
+        "message message"
+        "submit submit" ;
+  }
+
+  #first-name{
+    grid-area: first-name;
+    align-self: stretch;
+  }
+  #last-name{
+    grid-area: last-name;
+    align-self: stretch;
+  }
+  #address{
+    grid-area: address;
+    align-self: stretch;
+  }
+  #message{
+    grid-area: message;
+    align-self: stretch;
+  }
+  .submitBtn{
+    justify-self: center;
+    grid-area: submit;
+  }
